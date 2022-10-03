@@ -270,7 +270,6 @@ button {
     ),
     url(../images/hero-bgi.jpg);
   background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .hero-title {

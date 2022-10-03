@@ -178,15 +178,25 @@ button {
   border-radius: 2px;
   margin-top: 28px;
 }
-
-.portfolio-link,
-.studio-link {
+.portfolio-nav-link,
+.studio-nav-link {
   color: var(--accent-color);
+  border-bottom: 4px solid var(--accent-color);
+  border-radius: 2px;
+  width: 100%;
+  padding-bottom: 28px;
 }
 
-.header-icon {
+.mail-icon {
   width: 16px;
   height: 12px;
+}
+
+.tel-icon {
+  width: 10px;
+  height: 16px;
+}
+.header-icon {
   fill: var(--additional-text-color);
   margin-right: 10px;
 
@@ -260,6 +270,7 @@ button {
     ),
     url(../images/hero-bgi.jpg);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -561,7 +572,7 @@ button {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  transition-property: color;
+  transition-property: color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -573,12 +584,14 @@ button {
 
 .clients-icon {
   fill: #afb1b8;
+  height: 92px;
   padding: 16px 32px;
 
-  transition-property: color, background-color;
+  transition-property: fill, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .clients-item:hover,
 .clients-item:focus {
   color: var(--accent-color);
@@ -610,6 +623,10 @@ button {
 
   color: var(--primaru-text-color);
   background-color: var(--background-btn-color);
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-btn:hover,
 .menu-btn:focus {

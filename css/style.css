@@ -502,6 +502,7 @@ button {
   padding-top: 16px;
   column-gap: 10px;
 }
+
 .social-list-item-link {
   display: flex;
   justify-content: center;
@@ -520,10 +521,11 @@ button {
   height: 20px;
   fill: #afb1b8;
 
-  transition-property: color, background-color;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .social-list-item-link:hover,
 .social-list-item-link:focus {
   background-color: var(--accent-color);
@@ -532,9 +534,7 @@ button {
 .social-list-item-link:hover .team-social-icon,
 .social-list-item-link:focus .team-social-icon {
   fill: var(--accent-text-color);
-  background-color: var(--accent-color);
 }
-
 /* ======================== CLIENTS ======================== */
 .clients-title {
   font-family: "Roboto";
@@ -795,10 +795,11 @@ button {
   height: 20px;
   fill: var(--accent-text-color);
 
-  transition-property: fill, background-color;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .footer-icon-link:hover,
 .footer-icon-link:focus {
   background-color: var(--accent-color);
@@ -807,5 +808,70 @@ button {
 .footer-icon-link:hover .footer-icon,
 .footer-icon-link:focus .footer-icon {
   fill: var(--accent-text-color);
-  background-color: var(--accent-color);
 }
+
+/* ============ //FOOTER ================= */
+
+/* ============ BACKDROP  ================= */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4308;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* ============ / BACKDROP  ================= */
+
+/* ============ MODAL ================= */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 580px;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.modal-close-btn-icon {
+  width: 11px;
+  height: 11px;
+}
+/* ============ / MODAL ================= */

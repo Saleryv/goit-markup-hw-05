@@ -187,20 +187,18 @@ button {
   padding-bottom: 28px;
 }
 
-.mail-icon {
-  width: 16px;
-  height: 12px;
-}
-
-.tel-icon {
-  width: 10px;
-  height: 16px;
-}
 .header-icon {
+  display: block;
+  position: absolute;
+  left: -28px;
+  top: -1px;
+  width: 18px;
+  height: 18px;
+
   fill: var(--additional-text-color);
   margin-right: 10px;
 
-  transition-property: transform;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -224,12 +222,16 @@ button {
   letter-spacing: 0.02em;
   color: var(--additional-text-color);
   text-decoration: none;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  position: relative;
 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-tel {
+  position: relative;
   font-family: var(--primary-font);
   font-style: normal;
   font-weight: 500;
